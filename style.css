@@ -1,0 +1,205 @@
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #c0392b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: text-decoration 0.2s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+h2 {
+    color: #c0392b;
+    margin-top: 0;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Page produits */
+.produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+    align-items: start;
+}
+
+/* Pour un effet masonry natif (si supporté) */
+@supports (grid-template-rows: masonry) {
+    .produits {
+        grid-template-rows: masonry;
+    }
+}
+
+.produit {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 18px 12px 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid #eee;
+}
+
+.produit:hover {
+    box-shadow: 0 8px 24px rgba(192,57,43,0.15);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.produit img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.produit h3 {
+    margin: 8px 0 4px 0;
+    font-size: 1.1em;
+}
+
+.produit p {
+    font-size: 0.97em;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.produit button {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background 0.2s;
+}
+
+.produit button:hover {
+    background: #a93226;
+}
+
+/* Page d'accueil */
+.btn {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 18px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #a93226;
+}
+
+/* Page contact */
+form {
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 2px 8px rgba(192,57,43,0.07);
+}
+
+form label {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+form button {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #a93226;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .produits {
+        grid-template-columns: 1fr;
+    }
+    .produit img {
+        height: 120px;
+    }
+}
+
+
+
+
+
+
+
+
+
